@@ -30,10 +30,17 @@ const ModelSwitcher = ({ scale, isMobile }) => {
     const smallMacbookRef = useRef();
     const largeMacbookRef = useRef();
 
-    const SCALE_LARGE_DESKTOP = 0.08;
-    const SCALE_SMALL_MOBILE = 0.05;
+    // define canonical scales for clarity
+    const SCALE_LARGE_DESKTOP = 0.08; // 16" desktop
+    const SCALE_LARGE_MOBILE = 0.05;  // 16" mobile
+    const SCALE_SMALL_DESKTOP = 0.06; // 14" desktop
+    const SCALE_SMALL_MOBILE = 0.03;  // 14" mobile
 
-    const showLargeMacbook = scale === SCALE_LARGE_DESKTOP || scale === SCALE_SMALL_MOBILE;
+    // normalize incoming `scale` (sometimes passed as string from store)
+    const numericScale = Number(scale);
+
+    // show the 16" model when the normalized scale matches either the 16" desktop or 16" mobile value
+    const showLargeMacbook = numericScale === SCALE_LARGE_DESKTOP || numericScale === SCALE_LARGE_MOBILE;
 
     useGSAP(() => {
         if(showLargeMacbook) {
