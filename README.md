@@ -1,16 +1,22 @@
-# React + Vite
+>> React -> npm create vite@latest
+    -- Remove App.css, assets from src
+    -- Modify App.jsx (keeping or rendering all components there)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+>> TailwindCSS -> npm install tailwindcss @tailwindcss/vite
 
-Currently, two official plugins are available:
+>> src -> Components -> All Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>> src -> Constants -> index.js -> all data(json)
 
-## React Compiler
+>> Zustand -> npm install zustand clsx
+    -- zustand for global state
+    -- clsx for dynamic styling for tailwindcss
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+>> Three.js -> npm install three @react-three/drei @react-three/fiber
 
-## Expanding the ESLint configuration
+>> gltfjsx package -> npx gltfjsx macbook-14.glb -T (run same command for macbook.glb & macbook-16.glb)
+    -- It will take the 3D Model & just through the terminal it will convert into reactjs component
+    -- This command will convert the glb file to react component
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+>> GSAP -> npm install gsap @gsap/react
+        -> npm install react-responsive (for getting good responsive website)
